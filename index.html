@@ -13,56 +13,34 @@
   <style>
     html, 
     body {
-        font: 36px Arial, sans-serif;
+        font: 20vh Arial, sans-serif;
+        color: white;
         height: 100%;
         margin: 0;
+      background-color: red;
+
     }
 
-    #svg-container
+    #container
     {
       display: flex;
       align-items: center;
-      background-color: red;
+      justify-content: center;
       height: 100%;
     }
 
-    #landscape, #portrait
-    {
-      margin: 0 auto;
-      display: none
+    #content {
+      margin: 50px;
+      text-align: center;
     }
 
-    /* Portrait */
-@media screen and (orientation:portrait) {
-  #portrait {
-    display: block;
-    
-   }
-}
-/* Landscape */
-@media screen and (orientation:landscape) {
-  #landscape {
-    display: block;
-   }
-}
   </style>
 
 </head>
 
 <body>
-    <div id="svg-container">
-      <svg id="landscape" width="100%" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="240" height="80" stroke="red" stroke-width="3px" fill="red"/>
-        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-            font-weight="bold" fill="white">SKE NOE</text>    
-      </svg>
-      <svg id="portrait" width="100%" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="240" height="80" stroke="red" stroke-width="3px" fill="red"/>
-        <text x="50%" y="25%" dominant-baseline="middle" text-anchor="middle" font-weight="bold" fill="white">
-              <tspan x="50%">SKE</tspan> 
-              <tspan x="50%" dy="1.2em">NOE</tspan> 
-        </text>    
-      </svg>
+    <div id="container">
+      <div id="content">SKE NOE</div>
     </div>
 </body>
 </html>
