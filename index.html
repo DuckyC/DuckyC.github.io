@@ -1,1 +1,68 @@
-Does it work? yay
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SKE NOE</title>
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <style>
+    html, 
+    body {
+        font: 36px Arial, sans-serif;
+        height: 100%;
+        margin: 0;
+    }
+
+    #svg-container
+    {
+      display: flex;
+      align-items: center;
+      background-color: red;
+      height: 100%;
+    }
+
+    #landscape, #portrait
+    {
+      margin: 0 auto;
+      display: none
+    }
+
+    /* Portrait */
+@media screen and (orientation:portrait) {
+  #portrait {
+    display: block;
+    
+   }
+}
+/* Landscape */
+@media screen and (orientation:landscape) {
+  #landscape {
+    display: block;
+   }
+}
+  </style>
+
+</head>
+
+<body>
+    <div id="svg-container">
+      <svg id="landscape" width="100%" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="240" height="80" stroke="red" stroke-width="3px" fill="red"/>
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+            font-weight="bold" fill="white">SKE NOE</text>    
+      </svg>
+      <svg id="portrait" width="100%" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="240" height="80" stroke="red" stroke-width="3px" fill="red"/>
+        <text x="50%" y="25%" dominant-baseline="middle" text-anchor="middle" font-weight="bold" fill="white">
+              <tspan x="50%">SKE</tspan> 
+              <tspan x="50%" dy="1.2em">NOE</tspan> 
+        </text>    
+      </svg>
+    </div>
+</body>
+</html>
