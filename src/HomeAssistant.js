@@ -70,7 +70,7 @@ export class HomeAssistant extends EventTarget {
     } catch (err) {
       if (err === ERR_HASS_HOST_REQUIRED) {
         this.authOptions.hassUrl = prompt("What host to connect to?", "http://192.168.0.10:8123");
-        if (!authOptions.hassUrl) return;
+        if (!this.authOptions.hassUrl) return;
         this.auth = await getAuth(this.authOptions);
       } else {
         alert(`Unknown error: ${err}`);
