@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .split {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow: hidden;
+        padding-top: 20px;
+      }
+
+      .left {
+        left: 0;
+      }
+
+      .right {
+        right: 0;
+      }
+      #orginalContainer > *,
+      #cropped {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        /* height: 100%; */
+      }
+
+      #color {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 100px;
+        height: 100px;
+        background: gray;
+      }
+
+      #start,
+      #connect {
+        cursor: pointer;
+      }
+      #connect {
+        top: 30px;
+        /* display: none; */
+      }
+      #action-panel {
+        position: fixed;
+        left: 0;
+        width: 100px;
+        height: 300px;
+        background: #826F5E;
+        opacity: 0.5;
+        z-index: 999;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="action-panel">
+      <button id="start">Capture</button>
+      <button id="connect">Connect</button>
+      <button id="disconnect">Disconnect</button>
+      <button id="entity-select">Select Light</button>
+      <p>Selected light: <label id="light_entityid">None</label></p>
+    </div>
+    <div id="orginalContainer" class="split left">
+      <canvas id="video"></canvas>
+      <canvas id="overlay"></canvas>
+      
+    </div>
+    <div class="split right">
+      <canvas id="cropped"></canvas>
+      <div id="color"></div>
+    </div>
+  </body>
+
+  <script src="./main.js"></script>
+</html>

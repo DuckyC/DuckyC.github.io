@@ -1,0 +1,26 @@
+{
+  "name": "duckyc.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuckyC/DuckyC.github.io.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/DuckyC/DuckyC.github.io/issues"
+  },
+  "homepage": "https://github.com/DuckyC/DuckyC.github.io#readme",
+  "dependencies": {
+    "fast-average-color": "^9.3.0",
+    "home-assistant-js-websocket": "^8.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
